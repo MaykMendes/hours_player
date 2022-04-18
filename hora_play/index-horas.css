@@ -1,10 +1,11 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
-html, body{
+html,
+body {
     display: grid;
     height: 100%;
     place-items: center;
@@ -12,25 +13,26 @@ html, body{
 }
 
 
-#wrapper{
+#wrapper {
+    position: fixed;
     height: 100px;
     width: 360px;
     background: red;
     background: linear-gradient(135deg, #ff0000, #0400ff, #ff00d4);
     border-radius: 10px;
-    animation: animate 2s linear infinite;
+    animation: animate 3s linear infinite;
 }
 
 #wrapper #display,
-#wrapper span{
+#wrapper span {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-#wrapper #display{
-    
+#wrapper #display {
+
     background: #1b1b1b;
     height: 85px;
     width: 345px;
@@ -39,12 +41,13 @@ html, body{
     text-align: center;
 }
 
-#wrapper #data{
+#wrapper #data {
     font-size: 20px;
 }
 
 
-#wrapper #display #hours, #data{
+#wrapper #display #hours,
+#data {
     line-height: 85px;
     color: white;
     font-size: 50px;
@@ -52,26 +55,32 @@ html, body{
     letter-spacing: 1px;
     background: linear-gradient(135deg, #1100ff, #ff0000, #b700ff);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    animation: animate 2s linear infinite;
+    -webkit-text-fill-color: transparent;
+    animation: animate 5s linear infinite;
 }
 
 @keyframes animate {
-    100%{
+    100% {
         filter: hue-rotate(360deg)
     }
-    
+
 }
-#wrapper span{
+
+#wrapper span {
     height: 100%;
     width: 100%;
     background: inherit;
 }
 
-#wrapper span:first-child{
+#wrapper span:first-child {
     filter: blur(20px);
 }
 
-#wrapper span:last-child{
+#wrapper span:last-child {
     filter: blur(30px);
+}
+
+.music {
+    padding-top: 60%;
+    font-size: 100px;
 }
